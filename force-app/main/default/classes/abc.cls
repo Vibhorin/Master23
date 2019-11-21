@@ -5,7 +5,7 @@ public with sharing class abc {
     amount = 1234;
      system.debug('----in constructor abc');
     }
-
+//To check changes
 public string name{get;set;}
 public integer amount{get;set;}
 //public string closeDate{get;set;}
