@@ -1,0 +1,9 @@
+<apex:page standardController="Account" extensions="accountlistExtn" contentType="application/vnd.ms-excel#AccountTable.xls" showHeader="false">
+<apex:pageBlock >
+<apex:dataTable value="{!allaccount}" var="a">
+<apex:column headerValue="ID" value="{!a.id}"/>
+<apex:column headerValue="Name" value="{!a.Name}"/>
+<apex:column headerValue="AccountNumber" value="{!a.AccountNumber}"/>
+</apex:dataTable>
+</apex:pageBlock>  
+</apex:page>

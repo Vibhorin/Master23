@@ -1,0 +1,89 @@
+<aura:component >
+    <div class="slds-grid slds-wrap slds-grid--pull-padded">
+		<div class="slds-p-horizontal--small slds-size--1-of-3">To Process Payment</div>
+    </div>
+	<div class="slds-grid slds-wrap slds-grid--pull-padded">
+		<div class="slds-p-horizontal--small slds-size--1-of-3 slds-medium-size--1-of-3 slds-large-size--1-of-3">
+			<fieldset class="slds-form-element">
+				<div class="slds-form-element__control">
+					<span class="slds-radio">
+						<input type="radio" id="radio-25" name="options" checked="" />
+						<label class="slds-radio__label" for="radio-25">
+							<span class="slds-radio--faux"></span>
+							<span class="slds-form-element__label"></span>
+						</label>
+					</span>
+				</div>
+			</fieldset>
+		</div>
+		<div class="slds-p-horizontal--small slds-size--1-of-3 slds-medium-size--1-of-3 slds-large-size--1-of-3">Current Payment</div>
+		<div class="slds-p-horizontal--small slds-size--1-of-3 slds-medium-size--1-of-3 slds-large-size--1-of-3">
+			<div class="slds-text-align--right">$50</div>
+		</div>
+		
+	</div>
+	
+	<div class="slds-grid slds-wrap slds-grid--pull-padded">
+		<div class="slds-p-horizontal--small slds-size--1-of-3 slds-medium-size--1-of-3 slds-large-size--1-of-3">
+			<fieldset class="slds-form-element">
+				<div class="slds-form-element__control">
+					<span class="slds-radio">
+						<input type="radio" id="radio-26" name="options" checked="" />
+						<label class="slds-radio__label" for="radio-26">
+							<span class="slds-radio--faux"></span>
+							<span class="slds-form-element__label"></span>
+						</label>
+					</span>
+				</div>
+			</fieldset>
+		</div>
+		<div class="slds-p-horizontal--small slds-size--1-of-3 slds-medium-size--1-of-3 slds-large-size--1-of-3">Previous Payment</div>
+		<div class="slds-p-horizontal--small slds-size--1-of-3 slds-medium-size--1-of-3 slds-large-size--1-of-3">
+			<div class="slds-text-align--right">$50</div>
+		</div>
+	</div>
+	
+	<div class="slds-grid slds-wrap slds-grid--pull-padded">
+		<div class="slds-p-horizontal--small slds-size--1-of-3 slds-medium-size--1-of-3 slds-large-size--1-of-3">
+			<fieldset class="slds-form-element">
+				<div class="slds-form-element__control">
+					<span class="slds-radio">
+						<input type="radio" id="radio-27" name="options" checked="" />
+						<label class="slds-radio__label" for="radio-27">
+							<span class="slds-radio--faux"></span>
+							<span class="slds-form-element__label"></span>
+						</label>
+					</span>
+				</div>
+			</fieldset>
+		</div>
+		<div class="slds-p-horizontal--small slds-size--1-of-3 slds-medium-size--1-of-3 slds-large-size--1-of-3">Others</div>
+		<div class="slds-p-horizontal--small slds-size--1-of-3 slds-medium-size--1-of-3 slds-large-size--1-of-3">
+			<div class="slds-text-align--right">
+				<div class="slds-form-element">
+					<div class="slds-form-element__control">
+						<input type="text" id="text-input-01" class="slds-input" style="width:150px;" placeholder="Enter Amount" />
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	
+	<div class="slds-grid slds-grid--align-center">
+		<div class="slds-form-element">
+			<div class="slds-form-element__control">
+				<div class="slds-select_container">
+					<select id="select-01" class="slds-select" style="width:200px;">
+						<option>xxxx-xxx-xxx-3658</option>
+						<option>xxxx-xxx-xxx-2567</option>
+						<option>xxxx-xxx-xxx-2183</option>
+					</select>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+    
+      
+</aura:component>

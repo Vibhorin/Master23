@@ -1,0 +1,16 @@
+<apex:page >
+  <apex:form >
+  <script>
+  //alert("Hello");
+  function show()
+  {
+ //alert("Vibhor");
+  var name =document.getElementById("one").value;
+  alert('hello dude ' +name);
+  }
+  </script>
+  <input type ='text' id ="one" onchange="show()"/>
+  <apex:commandButton value="click" onclick="show()"/>
+  
+  </apex:form>
+</apex:page>

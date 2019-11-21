@@ -1,0 +1,21 @@
+<apex:page standardcontroller="Student__c" extensions="StudentController" tabStyle="Student__c">
+<apex:sectionHeader title="New Student Details" subtitle="Step 2 of 3"/>
+ <apex:form >
+  <apex:pageBlock title="Student Info">
+  <apex:facet name="footer">
+  <apex:outputPanel >
+  <apex:commandButton action="{!step1}" value="Previous"  styleClass="btn"/>
+  <apex:commandButton action="{!step3}" value="Next"  styleClass="btn"/>
+  </apex:outputPanel>
+  </apex:facet>
+  <apex:pageBlockSection title="Qualification Information">
+  <apex:panelGrid columns="2">
+  <apex:outputLabel value="Highest Qualification" for="Highestqualification"/>
+  <apex:inputField id="Highestqualification" value="{!student.Highest_Qualification__c}" />
+  <apex:outputLabel value="University" for="University"/>
+  <apex:inputField id="University" value="{!student.University__c}"/>
+  </apex:panelGrid>  
+  </apex:pageBlockSection>
+  </apex:pageBlock>
+  </apex:form>
+</apex:page>

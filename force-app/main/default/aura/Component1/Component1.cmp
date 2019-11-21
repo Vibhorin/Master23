@@ -1,0 +1,17 @@
+<aura:component implements="force:appHostable">
+    <aura:attribute name="Result" type="String"/>
+    <aura:attribute name="isDoneRendering" type="Boolean" default="false"/>
+    <aura:attribute name="att1" type="String" default="4"/>
+    <aura:attribute name="att2" type="String" default="3"/>
+    <!--aura:registerEvent name="navigate" type="c:Result"/-->
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+
+    <!--aura:handler event="aura:doneRendering" action="{!c.Add1}"/-->
+    
+    
+    <ui:inputText aura:id="n1" label="Number1" required="true" value="{!v.att1}"/>
+    <ui:inputText aura:id="n2" label="Number2" required="true" value="{!v.att2}"/>
+          
+    <ui:button label="Sum" press="{!c.Add}"/>
+    <span id="sumButton"></span>
+</aura:component>

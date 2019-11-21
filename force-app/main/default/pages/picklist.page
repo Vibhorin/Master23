@@ -1,0 +1,21 @@
+<apex:page >
+    <apex:sectionHeader title="Vibhor"/>
+    <apex:form >
+    <apex:selectList size="1">
+        
+        <apex:selectOption itemLabel="Vibhor" itemValue="1"/>
+        <apex:selectOption itemLabel="Vaibhav" itemValue="2"/>
+        <apex:selectOption itemLabel="Ashish" itemValue="3"/>
+        <apex:selectOption itemLabel="Vikash" itemValue="4" itemDisabled="true"/>
+        
+        </apex:selectList>
+        <apex:selectCheckboxes borderVisible="true" label="Select" legendText="What ever you want" >
+        <apex:selectOption itemLabel="Vibhor" itemValue="1"/>
+        <apex:selectOption itemLabel="Vaibhav" itemValue="2"/>
+        <apex:selectOption itemLabel="Ashish" itemValue="3"/>
+        <apex:selectOption itemLabel="Vikash" itemValue="4" itemDisabled="true"/>
+        
+        </apex:selectCheckboxes>
+    
+    </apex:form>
+</apex:page>

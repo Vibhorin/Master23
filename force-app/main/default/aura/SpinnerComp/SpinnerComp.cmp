@@ -1,0 +1,27 @@
+<aura:component controller="LightningSpinnerclass" >
+    <aura:handler event="aura:waiting" action="{!c.showSpinner}"/>
+    <aura:handler event="aura:doneWaiting" action="{!c.hideSpinner}"/>
+    <aura:attribute name="opportunities" type="Opportunity[]"/>
+    <aura:attribute name="showSpinnerImage" type="Boolean"/>
+   
+    <center>
+        <ui:button label="Get Opportunities" press="{!c.getOpps}"/> <br/> <br/>
+       
+        <aura:renderIf isTrue="{!v.showSpinnerImage}">
+            <img src="https://media.giphy.com/media/npCmk0VCFHyUM/giphy.gif"/>
+            <aura:set attribute="else">
+                <aura:iteration var="opportunity" items="{!v.opportunities}">
+                    <p>{!opportunity.Name} : {!opportunity.CloseDate}</p> <br/>
+                </aura:iteration>
+            </aura:set>
+        </aura:renderIf>
+    </center>
+   <div class="slds-grid">
+  <div class="slds-col">
+    <div class="slds-box slds-box--small slds-shrink slds-size--1-of-2"><div class="slds-col">Enter Your Age:-</div><div class="slds-col"><ui:inputnumber aura:id="abc" click="{!c.removeError}"/></div></div>
+  </div>
+  <div class="slds-col">
+    <div class="slds-box slds-box--small slds-size--1-of-2"><ui:button label="Submit" press="{!c.checkAge}"/></div>
+  </div>
+</div>    
+</aura:component>

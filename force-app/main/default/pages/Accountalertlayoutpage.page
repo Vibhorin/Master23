@@ -1,0 +1,8 @@
+<apex:page standardController="Account" >
+
+<script>
+if({!Account.Display_Alert__c})
+alert('Display Alert!!');
+</script>
+  
+</apex:page>

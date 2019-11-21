@@ -1,0 +1,29 @@
+<apex:page controller="custable" sidebar="false">
+    <apex:form >
+        <apex:pageBlock title="AccountTable">
+            <apex:pageBlockTable value="{!Acclst}" var="A">
+            <apex:column headerValue="EDIT">
+            <apex:outputLink value="/{!A.id}/e" id="edit">Edit</apex:outputLink>
+            </apex:column>
+            <apex:column headerValue="DELETE">
+            <apex:commandLink action="{!deleteAccount}" onclick="if(!confirm('Are you sure?')) return false;">Del
+            <apex:param value="{!A.Id}" name="idToDel" assignTo="{!recid}"/>
+            </apex:commandLink>
+            </apex:column>
+            <apex:column headerValue="NAME OF THE ACCOUNT" > 
+            <apex:commandLink value="{!A.Name}" action="{!setupContacts}" rerender="conttable">
+              <apex:param value="{!A.Id}" name="idForConts" assignTo="{!recid}"/>
+            </apex:commandLink>
+            </apex:column>  
+            <apex:column value="{!A.Id}"/>
+            </apex:pageBlockTable>
+        </apex:pageBlock>
+    </apex:form>
+    <apex:pageBlock title="Contacts">
+      <apex:pageBlockTable value="{!contacts}" var="contact" id="conttable">
+        <apex:column value="{!contact.id}"/>
+        <apex:column value="{!contact.FirstName}"/>
+        <apex:column value="{!contact.LastName}"/>
+      </apex:pageBlockTable>
+    </apex:pageBlock>
+</apex:page>

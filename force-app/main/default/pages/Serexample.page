@@ -1,0 +1,10 @@
+<apex:page controller="Setexample">
+    <apex:pageblock >
+    <apex:pageblocktable value="{!names}" var="a">
+        <apex:column value="{!a}"/>
+        
+        </apex:pageblocktable>
+    
+    </apex:pageblock>
+   
+</apex:page>

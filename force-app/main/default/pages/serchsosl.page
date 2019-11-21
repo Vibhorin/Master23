@@ -1,0 +1,19 @@
+<apex:page controller="withSOSL">
+<apex:form >
+<apex:commandButton value=" show records using sosl" action="{!sosldemo_methord}"/>
+<apex:pageBlock title="Account">
+<apex:pageBlockTable value="{!acclist}" var="a">
+<apex:column value="{!a.name}"/>
+<apex:column value="{!a.type}"/>
+</apex:pageBlockTable>
+</apex:pageBlock>
+<apex:pageBlock title="contacts">
+<apex:pageBlockTable value="{!conlist}" var="c" >
+<apex:column value="{!c.name}"/>
+<apex:column value="{!c.email}"/>
+</apex:pageBlockTable>
+</apex:pageBlock>
+</apex:form>
+
+  
+</apex:page>

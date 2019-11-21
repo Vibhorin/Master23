@@ -1,0 +1,25 @@
+<apex:page controller="returnUrl" >
+    <apex:form >
+       <apex:pageBlock >
+                <apex:pageBlockSection title="Criteria For Search" columns="2">
+                    <apex:outputLabel >Enter Account:</apex:outputLabel>
+                    <apex:inputtext value="{!nameQuery}"/>
+                    <apex:commandButton action="{!executeSearch}" value="search"/>
+                </apex:pageBlockSection>
+                <apex:pageBlockSection columns="2" >
+                    <apex:pageBlockTable value="{!account}" var="acc">
+                        <apex:column headerValue="Name">
+                        <apex:commandLink action="{!recordDisplay}" value="{!acc.Name}" reRender="accountrecords"/>                       
+                        </apex:column>
+                    </apex:pageBlockTable>
+                    <apex:outputPanel id="accountrecords" >
+                        <apex:outputPanel rendered="{!torender}">
+                            <apex:pageBlockSection >
+                                abcd
+                            </apex:pageBlockSection>
+                        </apex:outputPanel>     
+                     </apex:outputPanel>
+                </apex:pageBlockSection>
+            </apex:pageBlock>
+        </apex:form>
+</apex:page>

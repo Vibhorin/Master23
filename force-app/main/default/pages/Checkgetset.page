@@ -1,0 +1,6 @@
+<apex:page controller="Classgetset">
+    
+    <apex:outputlabel > Person Name is {!stringvalue} </apex:outputlabel><br/>
+   <apex:outputlabel > His age is {!integerage} </apex:outputlabel>
+    
+</apex:page>

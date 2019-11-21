@@ -1,0 +1,7 @@
+<apex:page >
+ <apex:form >
+ <apex:commandButton value="Click" style="background-image:URL('/resource/1473562590000/Logo');background-repeat:no-repeat;color:red;width:100px;height:100px;"/>
+ 
+ 
+ </apex:form>
+</apex:page>

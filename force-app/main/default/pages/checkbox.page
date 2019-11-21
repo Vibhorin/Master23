@@ -1,0 +1,35 @@
+<apex:page controller="Sample" tabStyle="Account">
+<apex:form >
+ <script>
+                   function checkboxuse(tag) {
+                        var menus  = document.getElementsByClassName("Teststyle");
+                        if (tag.checked == true) {
+                             
+                                   for (var i = menus.length - 1; i >= 0; i--)
+                             {
+                                    menus[i].disabled = true;
+                             }
+                         tag.disabled = false;
+                       }
+                       else {
+                             for (var i = menus.length - 1; i >= 0; i--)
+                             {
+                                     menus[i].disabled = false;
+                             }
+                         }
+                     }     
+              </script>
+<apex:pageMessages />
+    <apex:pageBlock id="pg">
+        <apex:pageBlockSection >
+            <apex:pageBlockTable value="{!listWrapper}" var="a" styleClass="Teststyle2">
+                <apex:column >
+                    <apex:inputCheckbox value="{!a.checkBool}"  id="tst" styleClass="Teststyle" onchange="return checkboxuse(this)"/>
+                </apex:column>
+                <apex:column value="{!a.acct.Name}" styleClass="Teststyle1" />
+                <apex:column value="{!a.acct.Industry}"/>
+            </apex:pageBlockTable>
+        </apex:pageBlockSection>
+    </apex:pageBlock>
+</apex:form>
+</apex:page>

@@ -1,0 +1,7 @@
+<apex:page standardController="Account" extensions="SimpleDemoController">
+  <apex:form >
+    <apex:pageBlock >
+        Id of the current record is : <b>{!recordId}</b>
+    </apex:pageBlock>
+  </apex:form>
+</apex:page>

@@ -1,0 +1,12 @@
+<apex:page >
+  <script src="https://ap2.salesforce.com/soap/ajax/38.0/connection.js" type ="text/javascript">  
+  </script>
+   <script type ="text/javascript">
+   var __sfdcSessionId = '{!GETSESSIONID()}';   
+    alert(sfdcSessionId);    
+       
+       var acc = sforce.connection.query("Select id,name From Account");
+       var records = acc.getArray("records");
+  alert(records);
+        </script>
+       </apex:page>

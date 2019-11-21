@@ -1,0 +1,9 @@
+<apex:page controller="test1">
+<apex:form >
+    <apex:pageblock >
+        <apex:commandlink action="{!switch}" styleclass="btn" style="text-decoration:none;padding:5px;" value="Click" target="_blank">
+        <apex:commandLink />
+            </apex:commandLink>
+    </apex:pageblock>
+</apex:form>
+</apex:page>

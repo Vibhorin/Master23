@@ -1,0 +1,14 @@
+<apex:page controller="VisualforceCodeController">
+<apex:form >
+<apex:pageBlock >
+<apex:commandLink value="SeeMagic" action="{!DisplayCode}">
+<apex:param assignTo="{!Currentpagename}" value="{!$CurrentPage.name}"/>
+</apex:commandlink>
+<apex:outputText value="{!Currentpagename}" title="Game"> </apex:outputText>
+<apex:outputPanel rendered="{!Showcodesection}">
+<apex:outputLabel value="{!Pagetext}">
+</apex:outputLabel>
+</apex:outputpanel>
+</apex:pageBlock>
+ </apex:form>
+</apex:page>

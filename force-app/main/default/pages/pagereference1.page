@@ -1,0 +1,9 @@
+<apex:page controller="Sample1">
+<apex:form >
+    <apex:pageblock >
+       
+            <apex:commandButton value="Switch" action="{!switch}"/>
+        
+    </apex:pageblock>
+</apex:form>
+</apex:page>

@@ -1,0 +1,8 @@
+<apex:page >
+  <apex:sectionHeader title="HomePage" Subtitle="MyPage"/>
+  <apex:include pageName="pagecodedisplay"/>
+  <apex:pageBlock title="footer">
+  <apex:iframe src="https://c.ap2.visual.force.com/apex/SiteRegister"/>
+  Thankyou
+  </apex:pageblock>
+</apex:page>

@@ -1,0 +1,25 @@
+<apex:page controller="newOpportunityController" tabStyle="Opportunity">
+  <apex:sectionHeader title="New Customer Opportunity" subtitle="Step 2 of 3"/>
+  <apex:form >
+  <apex:pageBlock title="Customer Info">
+  <apex:facet name="footer">
+  <apex:outputPanel >
+  <apex:commandButton action="{!step1}" value="Previous"  styleClass="btn"/>
+  <apex:commandButton action="{!step3}" value="Next"  styleClass="btn"/>
+  </apex:outputPanel>
+  </apex:facet>
+  <apex:pageBlockSection title="Opportunity Information">
+  <apex:panelGrid columns="2">
+  <apex:outputLabel value="Opportunity Name" for="OpportunityName"/>
+  <apex:inputField id="OpportunityName" value="{!opportunity.name}"/>
+ <apex:outputLabel value="Amount" for="OpportunityAmount"/>
+  <apex:inputField id="OpportunityAmount" value="{!opportunity.amount}"/>
+  <apex:outputLabel value="Close Date" for="OpportunityCloseDate"/>
+  <apex:inputField id="OpportunityCloseDate" value="{!opportunity.closeDate}"/> 
+  <apex:outputLabel value="Stage" for="OpportunityStageName"/>
+  <apex:inputField id="OpportunityStageName" value="{!opportunity.StageName}"/> 
+  </apex:panelGrid>  
+  </apex:pageBlockSection>
+   </apex:pageblock> 
+  </apex:form>
+</apex:page>

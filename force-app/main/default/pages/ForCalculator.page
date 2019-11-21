@@ -1,0 +1,30 @@
+<apex:page controller="calculator">
+    <apex:form >
+   <apex:pageblock title="Calculator">
+       <apex:pageblocksection columns="1" title="Simple operation">
+       
+       <apex:pageblocksectionitem >
+           <apex:outputLabel > Enter A value </apex:outputLabel>
+           
+           <apex:inputtext value="{!avalue}"/>
+           </apex:pageblocksectionitem>
+               <apex:pageblocksectionitem >
+           <apex:outputLabel > Enter B value </apex:outputLabel>
+           
+                   <apex:inputtext value="{!bvalue}"/>
+           </apex:pageblocksectionitem>
+           </apex:pageblocksection> 
+       <apex:pageblocksection > 
+       <apex:commandbutton action="{!subb}" value="Subtract"  rerender="one"/>
+        <apex:commandbutton action="{!add}" value="Add" rerender="one" />
+       </apex:pageblocksection> 
+           <apex:outputLabel id="one"  > You have performed action {!operation} on {!avalue} and {!bvalue} , its output is {!result}
+           
+           </apex:outputLabel>
+             
+        
+        </apex:pageblock>    
+    
+    
+    </apex:form>
+</apex:page>

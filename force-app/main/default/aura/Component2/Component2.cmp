@@ -1,0 +1,7 @@
+<aura:component implements="force:appHostable">
+    <aura:attribute name="res" type="String" default="0" />  
+    <aura:handler event="c:Result" action="{!c.handleApplicationEvent}"/>
+	<div id="test">  
+    The result is {!v.res}
+    </div>
+</aura:component>

@@ -1,0 +1,31 @@
+<apex:page controller="Sample" tabStyle="Account">
+<apex:form >
+             <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+             <script>
+             $j =jQuery.noConflict();
+                         
+             $j(document).ready(function changeFont(input, textid) {
+            if(input.checked) {
+            $j("[id$=col1]").prop("disabled",true);
+               // document.getElementById(textid).style.display = "none";
+            }
+            else {
+                document.getElementById(textid).style.fontWeight = "normal";
+            }
+        });           
+              </script>
+<apex:pageMessages />
+    <apex:pageBlock id="pg">
+        <apex:pageBlockSection >
+            <apex:pageBlockTable value="{!listWrapper}" var="a" styleClass="Teststyle2">
+                <apex:column >
+                    <apex:inputCheckbox value="{!a.checkBool}"  id="tst" styleClass="Teststyle" onchange="changeFont(this,'{!$Component.col1}')"/>
+                </apex:column>
+                <apex:column value="{!a.acct.Name}" id="col1" />
+                
+                <apex:column value="{!a.acct.Industry}" id="col2"/>
+            </apex:pageBlockTable>
+        </apex:pageBlockSection>
+    </apex:pageBlock>
+</apex:form>
+</apex:page>

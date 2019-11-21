@@ -1,0 +1,6 @@
+<apex:page standardController="Account" >
+    <apex:outputLabel value="Vibhor"></apex:outputLabel><br/>
+     <apex:outputLabel value="{!account.name}" ></apex:outputLabel><br/>
+    <apex:outputField value="{!account.name}" /> <br/>
+     <apex:outputText value="{!account.name}"></apex:outputText> <br/>
+</apex:page>

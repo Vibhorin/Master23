@@ -1,0 +1,46 @@
+<apex:page standardcontroller="Student__c" extensions="StudentController" tabStyle="Student__c" >
+    <apex:sectionHeader title="New Student Details" subtitle="Step 1 of 3"/>
+    <apex:form id="myform" >
+        <apex:pageBlock title="Student Info" id="Pageblock">
+            <apex:facet name="footer">
+                <apex:outputPanel >
+                   <!--<apex:commandButton action="{!step2}" value="Next" styleClass="btn" onclick="return validate()"/> -->
+                    <apex:commandButton action="{!step2}" value="Next" styleClass="btn" />
+                </apex:outputPanel>
+            </apex:facet>
+            <apex:pageBlockSection title="Student Basic Information" id="PageblockSection">
+              <apex:panelGrid columns="2">
+              <apex:outputLabel value="FirstName" for="firstname"/>
+              <apex:inputField id="firstname" value="{!student.Name}" />
+              <apex:outputLabel value="LastName" for="lastname"/>
+              <apex:inputField id="lastname" value="{!student.Last_Name__c}" />              
+              <apex:outputtext rendered="{!LEN(errorMessage)>0}"/>
+              <apex:outputText value="{!errorMessage}" styleClass="errorMsg" rendered="{!LEN(errorMessage)>0}"/>
+              <apex:outputLabel value="Married" for="married"/>
+              <apex:inputField id="married" value="{!student.Married__c}"/> 
+              </apex:panelGrid>  
+              </apex:pageBlockSection>
+                  <apex:pageBlockSection title="Address Information">
+                  <apex:panelGrid columns="2">
+                  <apex:outputLabel value="Address" for="Address"/>
+                   <apex:inputField id="Address" value="{!student.Address__c}"/> 
+                  <apex:outputLabel value="State" for="state"/>
+                  <apex:inputField id="state" value="{!student.State__c}"/>
+                  </apex:panelGrid>  
+                  </apex:pageBlockSection> 
+      </apex:pageBlock>
+  </apex:form>
+   <script>
+   
+function validate()
+    {
+    
+        var a = document.getElementById('{!$Component.myform.Pageblock.PageblockSection.lastname}').value;
+        if(a == null || a.length == 0)
+        {
+             alert("Last name is a Mandatory Field");
+             return false;
+        }
+    }
+</script>
+</apex:page>

@@ -1,0 +1,18 @@
+<aura:component >
+	Enter a number: <ui:inputNumber aura:id="inputCmp"/> <br/>
+    <ui:button label="Submit" press="{!c.doAction}"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+  <ui:inputSelect label="Select me:" class="dynamic" aura:id="InputSelectDynamic"/>
+    <aura:attribute name="contacts" type="String[]" default="All Contacts,Others"/>
+<ui:inputSelect >
+    <aura:iteration items="{!v.contacts}" var="contact">
+        <aura:if isTrue="{!contact == 'All Contacts'}"> 
+            <ui:inputSelectOption text="{!contact}" label="{!contact}"/>
+            <aura:set attribute="else">
+                <ui:inputSelectOption text="All Primary" label="All Primary"/>
+                <ui:inputSelectOption text="All Secondary" label="All Secondary"/>
+            </aura:set>
+        </aura:if>
+    </aura:iteration>
+</ui:inputSelect>
+</aura:component>

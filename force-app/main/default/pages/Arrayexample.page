@@ -1,0 +1,16 @@
+<apex:page controller="Arrayclass">
+    <apex:form >
+    <apex:pageblock >
+        <apex:pageblocktable value="{!name}" var="a" rows="2">
+        
+        <apex:column value="{!a}"/>
+                                        
+        </apex:pageblocktable>
+        <apex:outputLabel value="{!surname}">
+        
+        </apex:outputLabel>
+        
+        
+        </apex:pageblock>    
+    </apex:form>
+</apex:page>

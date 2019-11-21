@@ -1,0 +1,12 @@
+<apex:page standardController="Account" extensions="ErrorDisplayDemoController">
+ <apex:form >
+   <apex:pageblock >
+      <apex:pageMessages id="shwmsg"></apex:pageMessages>
+         <apex:panelGrid columns="2">
+           Account Name <apex:inputtext value="{!accountname}"/>
+           Account Number <apex:inputtext value="{!accountnumber}"/>
+           <apex:commandButton value="Update" action="{!UpdateAccount}" style="width:70px" rerender="shwmsg"/>
+         </apex:panelGrid>
+    </apex:pageblock>
+ </apex:form>
+</apex:page>

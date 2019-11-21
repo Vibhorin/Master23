@@ -1,0 +1,7 @@
+<apex:page controller="SinglepicklistforMyContact" >
+    <apex:form >
+        <apex:selectList size="1" value="{!selectedAccId}">
+            <apex:selectOptions value="{!AccountNames}"/>
+        </apex:selectList>
+    </apex:form>
+</apex:page>

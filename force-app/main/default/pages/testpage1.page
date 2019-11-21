@@ -1,0 +1,18 @@
+<apex:page controller="SimpleDynamicController">
+    <apex:form >
+        <apex:pageBlock title="Enter your SOQL Query">
+            <apex:pageMessages ></apex:pageMessages>
+            <apex:inputTextarea id="query" value="{!query}" styleClass="query" />
+            <br/>
+            <apex:commandButton action="{!runQuery}" value="Submit Query"/>
+            <br/>
+            <apex:pageBlockTable value="{!result}" var="r" rendered="{!showResult}">
+            <apex:repeat value="{!fields}" var="f" rendered="{!showResult}">          
+            
+                 <apex:column Value="{!r[f]}}"></apex:column>               
+                   
+                </apex:repeat>
+             </apex:pageBlockTable> 
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

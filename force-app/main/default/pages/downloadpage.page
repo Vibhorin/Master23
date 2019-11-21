@@ -1,0 +1,12 @@
+<apex:page standardController="Account" extensions="accountlistExtn" standardStylesheets="false" >
+  <apex:form >
+  <apex:commandbutton id="button" value="Download all accounts" action="{!getexport}" reRender=""/>
+ <apex:pageBlock title="All Accounts" rendered="True">
+<apex:pageblocktable value="{!allaccount}" var="a">
+<apex:column value="{!a.id}"/>
+<apex:column value="{!a.Name}"/>
+<apex:column value="{!a.AccountNumber}"/>
+</apex:pageblocktable>
+</apex:pageBlock>
+</apex:form>
+</apex:page>

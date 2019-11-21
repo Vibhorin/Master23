@@ -1,0 +1,23 @@
+<apex:page standardController="Account" extensions="inlineEditControl">
+    <apex:form >
+         <apex:pageBlock mode="inlineEdit">
+            <apex:pageBlockButtons >
+                <apex:commandButton value="Delete" id="deleteBut"/>
+                <apex:commandButton value="Edit" id="editBut" />
+                <apex:commandButton id="saveBut" value="Save"/>
+                <apex:commandButton id="cancelBut" value="Cancel"/>
+            </apex:pageBlockButtons>
+        <apex:pageblock >
+         Click here to enable inline editing     <apex:inputCheckbox >
+                <apex:actionSupport event="onclick" action="{!SetInlineEdit}" reRender="pgblck"/>
+              </apex:inputCheckbox>
+            </apex:pageblock>
+            <apex:pageBlockSection id="pgblck">
+                <apex:outputField value="{!account.name}">
+                    <apex:inlineEditSupport showOnEdit="saveBut, cancelBut"  event="ondblclick" hideOnEdit="deleteBut,editbut" rendered="{!InLineFlag}"/>
+                </apex:outputField>
+               
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

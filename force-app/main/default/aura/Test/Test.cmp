@@ -1,0 +1,34 @@
+<aura:component >
+    <div class="slds-grid foo slds-p-around--none">
+        <div class="slds-grow slds-size--1-of-1 slds-medium-size--1-of-2 slds-large-size--4-of-12 
+                    slds-col-rule--right slds-p-around--large">
+            
+            Enter Your Age:-<ui:inputnumber class="slds-p-around--xxx-small" aura:id="abc" click="{!c.removeError}"/>
+            
+        </div>
+        <div class="slds-shrink-none slds-size--1-of-1 slds-medium-size--1-of-2 slds-large-size--4-of-12 slds-p-around--large" role="complementary">
+            
+            <ui:button label="Submit" press="{!c.checkAge}" class="slds-p-horizontal--xxx-small"/>
+            
+        </div>
+        <div class="slds-shrink-none slds-size--1-of-1 slds-medium-size--1-of-2 slds-large-size--4-of-12 slds-p-around--large" role="complementary">
+            
+            <ui:outputtext value="This is vibhor"/>
+            
+        </div>
+    </div>
+    
+<div class="slds-grid poo">
+    <div class="slds-grow slds-size--1-of-1 slds-medium-size--1-of-2 slds-large-size--8-of-12 
+                slds-col-rule--right slds-p-around--large">
+        
+        Enter Your Name:-<ui:inputtext aura:id="abc1" click="{!c.removeTextError}"/>
+        
+    </div>
+    <div class="slds-shrink-none slds-size--1-of-1 slds-medium-size--1-of-2 slds-large-size--4-of-12 slds-p-around--large" role="complementary">
+        
+        <ui:button label="Submit" press="{!c.checkName}"/>
+        
+    </div>
+</div>
+</aura:component>

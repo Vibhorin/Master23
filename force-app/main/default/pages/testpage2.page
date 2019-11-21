@@ -1,0 +1,20 @@
+<apex:page controller="Vibhor">  
+  <script type="text/javascript">
+  function newpage()
+  {
+  callfind();
+ alert('Redirecting...'); 
+    }
+  </script>
+  <apex:pagemessages />
+  <apex:form > 
+  <apex:pageBlock >
+  <apex:pageBlockSection title="Type Query">
+  <apex:outputLabel >Query:-</apex:outputLabel>
+  <apex:inputtext value="{!query}"/>
+    </apex:pageBlockSection>
+ <apex:commandButton value="Query" onclick="callfind()"/> 
+  <apex:actionFunction name="callfind" action="{!searchandfind}" />
+  </apex:pageBlock>
+  </apex:form>
+</apex:page>

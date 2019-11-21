@@ -1,0 +1,3 @@
+<apex:page standardController="Opportunity" extensions="opportunitylistExtn" contentType="text/csv#filename.csv" >
+{!csv1}
+</apex:page>

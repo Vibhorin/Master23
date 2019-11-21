@@ -1,0 +1,11 @@
+<apex:page controller="SampleController" >
+<script>
+        function callSave(){
+            var r = confirm("Are you sure want to save?");
+            if(r == true) {                
+                callSav();
+            }
+        }
+    </script>
+
+</apex:page>

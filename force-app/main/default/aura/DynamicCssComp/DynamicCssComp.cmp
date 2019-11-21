@@ -1,0 +1,22 @@
+<aura:component >
+    <aura:attribute name="edit" type="Boolean"/>
+	<div aura:id="changeIt">Change Me!</div><br />
+    <ui:button press="{!c.applyCSS}" label="Add Style" />
+    <ui:button press="{!c.removeCSS}" label="Remove Style" />
+    <ui:button label="Toggle" press="{!c.toggle}"/>
+    <p aura:id="text">Now you see me</p>    
+    <aura:if isTrue="{v.edit}">
+        <ui:button label="Edit" />
+        <aura:set attribute="else">
+            <ui:button label="Edit" disabled="true"/>
+        </aura:set>
+    </aura:if>
+    <div class="slds-grid">
+  <div class="slds-col">
+    <div class="slds-box slds-box--small slds-theme--shade slds-text-align--center slds-size--1-of-2">Enter Your Age:-<ui:inputnumber aura:id="abc" /></div>
+  </div>
+  <div class="slds-col">
+    <div class="slds-box slds-box--small slds-theme--shade slds-text-align--center slds-size--1-of-2"><ui:button label="Submit" press="{!c.checkAge}"/></div>
+  </div>
+</div>
+</aura:component>

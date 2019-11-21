@@ -1,0 +1,16 @@
+<apex:page >
+    <apex:sectionHeader title="FirstPage" rendered="true" subtitle="Test" description="This is a wonderful Page"/>
+    {!$User.FirstName}<br/>
+      {!$Profile.Name}<br/>
+      {!$Organization.Name}<br/>
+    <p>
+       <H1>
+       You can go to any level over here    
+    </H1> 
+    <br/>
+    {! 'sam' +"kiran is there"}<br/>
+    {! 10+20}<br/>
+    </p>
+{!$CurrentPage.parameters.name}<br/>
+{!$CurrentPage.parameters.age}
+</apex:page>

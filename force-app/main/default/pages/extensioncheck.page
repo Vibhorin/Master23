@@ -1,0 +1,12 @@
+<apex:page Controller="Custom" extensions="abc,abc1">
+<apex:form >
+<apex:pageBlock > 
+<apex:pageBlockSection title="Opportunity Information" > 
+<apex:outputtext value="{!name}"/>
+<apex:outputtext value="{!amount}"/> 
+<apex:outputtext value="Closedate:-{!closeDate}"/>
+</apex:pageBlockSection>
+        <apex:commandButton value="Do something" action="{!doSomething}" />  
+    </apex:pageBlock>
+    </apex:form>
+</apex:page>

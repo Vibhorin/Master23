@@ -1,0 +1,32 @@
+<apex:page >
+    <apex:form id="frm">
+    <apex:inputtextarea id="txt1"></apex:inputtextarea>
+    </apex:form>
+        <script src="https://ap2.salesforce.com/soap/ajax/38.0/connection.js" type ="text/javascript">  
+          </script>
+    <script type ="text/javascript">
+       try{
+          var result = sforce.connection.login("vibhorin@salesforce.com", "Salesforce@1235sJYQDlYamPuZqEjmRiL7x4i6");
+          alert("logged in with session id " + result.sessionId);
+    }
+    catch(error) {
+      if (error.faultcode.indexOf("INVALID_LOGIN") != -1) {
+        alert("check your username and passwd, invalid login");
+      } else {
+        alert(error);
+      }
+    }
+        result = sforce.connection.query("Select Name, Id from User");
+        records = result.getArray("records");
+        var abc;
+        for (var i=0; i< records.length; i++) {
+          var record = records[i];
+          abc += record.Name + " -- " + record.Id+ "/n";
+          alert(record.Name + " -- " + record.Id);
+        }
+    var fld = document.getElementById('{!$Component.frm.txt1}');
+   //var fld = document.getElementById(txt1);
+      alert('---fld'+fld);
+      fld.innerHTML =abc;
+    </script>     
+</apex:page>

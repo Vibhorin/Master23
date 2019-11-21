@@ -1,0 +1,30 @@
+<aura:component >
+    <aura:attribute name="stages" type="String[]" default="Any,Open,Closed,Closed Won"/>
+    <fieldset class="slds-form-element">
+  <legend class="slds-form-element__legend slds-form-element__label">Payment Options</legend>
+  <div class="slds-form-element__control">
+    <span class="slds-radio">
+      <input type="radio" id="radio-25" name="options" checked="True" />
+      <label class="slds-radio__label" for="radio-25">
+        <span class="slds-radio--faux"></span>
+        <span class="slds-form-element__label">Total Payment</span>
+      </label>
+    </span>
+      <span class="slds-radio">
+      <input type="radio" id="radio-26" name="options" />
+      <label class="slds-radio__label" for="radio-26">
+        <span class="slds-radio--faux"></span>
+        <span class="slds-form-element__label">Previous Payment</span>
+      </label>
+    </span>
+	<span class="slds-radio">
+      <input type="radio" id="radio-27" name="options" />
+      <label class="slds-radio__label" for="radio-27">
+        <span class="slds-radio--faux"></span>
+        <span class="slds-form-element__label">Others</span>
+      </label>
+    </span>
+  </div>
+</fieldset>
+    
+</aura:component>

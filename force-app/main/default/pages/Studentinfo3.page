@@ -1,0 +1,41 @@
+<apex:page standardcontroller="Student__c" extensions="StudentController" tabStyle="Student__c" >
+<apex:pagemessages />
+<apex:sectionHeader title="New Student Details" subtitle="Step 3 of 3"/>
+<apex:form >
+  <apex:pageBlock title="Student Info">
+  <apex:facet name="footer">
+  <apex:outputPanel >
+  <apex:commandButton action="{!step2}" value="Previous"  styleClass="btn"/>
+  <apex:commandButton action="{!save}" value="Save"  styleClass="btn"/>
+  <apex:commandButton action="{!saveNew}" value="Save&New"  styleClass="btn"/>
+  </apex:outputPanel>
+  </apex:facet>
+  <apex:pageBlockSection title="Student Basic Information">
+  <apex:panelGrid columns="2">
+  <apex:outputLabel value="FirstName" for="firstname"/>
+  <apex:outputField id="firstname" value="{!student.Name}" />
+  <apex:outputLabel value="LastName" for="lastname"/>
+  <apex:outputField id="lastname" value="{!student.Last_Name__c}"/>
+  <apex:outputLabel value="Married" for="married"/>
+  <apex:outputField id="married" value="{!student.Married__c}"/> 
+  </apex:panelGrid>  
+  </apex:pageBlockSection>
+  <apex:pageBlockSection title="Address Information">
+  <apex:panelGrid columns="2">
+  <apex:outputLabel value="Address" for="Address"/>
+   <apex:outputField id="Address" value="{!student.Address__c}"/> 
+  <apex:outputLabel value="State" for="state"/>
+  <apex:outputField id="state" value="{!student.State__c}"/>
+  </apex:panelGrid> 
+  </apex:pageBlockSection>
+  <apex:pageBlockSection title="Qualification Information">
+  <apex:panelGrid columns="2">
+  <apex:outputLabel value="Highest Qualification" for="Highestqualification"/>
+  <apex:outputfield id="Highestqualification" value="{!student.Highest_Qualification__c}" />
+  <apex:outputLabel value="University" for="University"/>
+  <apex:outputfield id="University" value="{!student.University__c}"/>
+  </apex:panelGrid>  
+  </apex:pageBlockSection>
+  </apex:pageBlock>
+  </apex:form>
+</apex:page>
