@@ -5,6 +5,12 @@
         "paths": {
             "c/helloWorld": [
                 "helloWorld/helloWorld.js"
+            ],
+            "c/firstLightningWebComponent": [
+                "firstLightningWebComponent/firstLightningWebComponent.js"
+            ],
+            "c/FirstLightningWebComponent": [
+                "FirstLightningWebComponent/FirstLightningWebComponent.js"
             ]
         }
     },
